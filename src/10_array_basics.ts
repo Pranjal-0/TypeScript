@@ -73,13 +73,8 @@ const fav = getFavorites(contacts);
 console.log(fav)
 
 
-
-
-
 const result = findContact(contacts, "ssdsd");
 console.log(result);
-
-
 
 
 const total = countFavorites(contacts)
