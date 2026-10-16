@@ -59,5 +59,27 @@ const readonlyUser: ReadOnlyUserN10 = {
 type publicUserN10 = Pick<User10,"id"|"name">
 const publicUser:publicUserN10 = {id:"u5",name:"sangham"}
 
-// omit
-// continue from 3:18:13
+// omit<T,K> remove some keys
+
+type UserWithoutEmailN10 = Omit<User10,"email">;
+const omtiUserN10 : UserWithoutEmailN10 = {
+    id: "u2",
+    name : "name",
+    address:{
+        line:'d',
+        city:'c'
+    },
+    // email 
+    // email as been removed
+}
+
+// record<k,v>
+type Rolek = 'admin'|'user'|'editor'
+type RoleCheck = Record<Rolek,User10>;
+const dirN10 : RoleCheck = {
+    admin:{id:'u10',name:'admin',address:{line:'line1',city:'city'}},
+        user:{id:'u11',name:'user',address:{line:'lin2',city:'city'}},
+            editor:{id:'u13',name:'editor',address:{line:'line3',city:'city'}},
+
+}
+ 
